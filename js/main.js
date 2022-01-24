@@ -1,7 +1,16 @@
-// Tramite API stampiamo un numero casuale
 new Vue({
   el: "#app",
-  data: {},
+  data: {
+      emails:[]
+  },
   methods: {},
-  mounted() {},
+  mounted() {
+    for (i=0; i<10; i++){
+        axios
+        .get("https://flynn.boolean.careers/exercises/api/random/mail")
+        .then((result) => {
+          this.emails.push(result.data.response)
+        });
+    }
+  },
 });

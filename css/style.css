@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1{
+    text-align: center;
+}
+#app{
+    width: 500px;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+    margin: 20px;
+    padding: 20px;
+    width: auto;
+    border:1px solid #000
+}
+li{
+    padding: 10px;
+}
+.even{
+    background-color: #c0c0c0;
+}
+.odd{
+    background-color: #8b8888;
+}

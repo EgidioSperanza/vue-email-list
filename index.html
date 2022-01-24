@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vue-Email-List</title>
     <!-- ----CSS---- -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- ----AXIOS---- -->
@@ -14,8 +14,13 @@
 
 </head>
 <body>
+    <h1>BoolMail</h1>
     <div id="app">
-
+        <!-- Bonus: we only show the list when it consists of 10 items -->
+        <ul v-if="emails.length===10">
+            <!-- we color in alternate lines -->
+            <li v-for="(email, index) in emails" :class="index%2===0 ? 'even' : 'odd'">{{email}}</li>
+        </ul>
     </div>
     
     <script src="./js/main.js"></script>
