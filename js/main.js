@@ -1,15 +1,15 @@
 new Vue({
   el: "#app",
   data: {
-      emails:[]
+    emails: [],
   },
   methods: {},
   mounted() {
-    for (i=0; i<10; i++){
-        axios
+    for (i = 0; i < 10; i++) {
+      axios
         .get("https://flynn.boolean.careers/exercises/api/random/mail")
         .then((result) => {
-          this.emails.push(result.data.response)
+          this.emails.push(result.data.response);
         });
     }
   },
